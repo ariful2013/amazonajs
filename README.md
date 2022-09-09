@@ -176,7 +176,7 @@ $ npm start
    11. create router() function
    12. set main_container innerHTML to HomeScreen.render()
    13. set load event of window to router() function
-5. Build Url Router 01:06::00
+5. Build Url Router 00:55::00
    1. create routes as route:screen object for home screen
    2. create utils.js
    3. export parseRequestURL()
@@ -187,7 +187,7 @@ $ npm start
    8. build parsedUrl and compare with routes
    9. if route exists render it, else render Error404
    10. create screens/Error404.js and render error message
-6. Create Node.JS Server
+6. Create Node.JS Server 01:06:00
    1. run npm init in root jsamazona folder
    2. npm install express
    3. create server.js
@@ -197,7 +197,7 @@ $ npm start
    7. create route for /api/products
    8. return products in data.js
    9. run npm start
-7. Load Products From Backend
+7. Load Products From Backend 01:14:00
    1. edit HomeScreen.js
    2. make render async
    3. fetch products from '/api/products' in render()
