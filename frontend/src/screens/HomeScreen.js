@@ -1,4 +1,5 @@
-import data from '../data.js';
+// import data from '../data.js';
+import axios from 'axios';
 
 const ProductComponent = (product) => {
   return `
@@ -66,8 +67,43 @@ const PaginationComponent = () => {
 };
 
 const HomeScreen = {
-  render: () => {
-    const { products } = data;
+  render: async () => {
+    // const { products } = data;
+
+    // const response = await fetch('http://localhost:5000/api/products', {
+    //   'Content-Type': 'application/json',
+    // });
+
+    // if (!response || !response.ok) {
+    //   return `
+    //     <div class="container-fluid">
+    //       <div class="row">
+    //         <h3>Error in getting Data from server</h3>
+    //       </div>
+    //     </div>
+    //   `;
+    // }
+    // const products = await response.json();
+
+    const response = await axios({
+      url: 'http://localhost:5000/api/products',
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
+    if (!response || response.statusText !== 'OK') {
+      return `
+        <div class="container-fluid">
+          <div class="row">
+            <h3>Error in getting Data from server</h3>
+          </div>
+        </div>
+      `;
+    }
+    const products = response.data;
+
     return `
       <div class="container-fluid">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 row-cols-xl-4 py-4">

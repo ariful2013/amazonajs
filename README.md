@@ -204,7 +204,7 @@ $ npm start
    4. make router() async and call await HomeScreen.render()
    5. use cors on backend
    6. check the result
-8. Add Webpack
+8. Add Webpack 01:21:30
    1. cd frontend
    2. npm install -D webpack webpack-cli webpack-dev-server
    3. npm uninstall live-server
@@ -216,14 +216,14 @@ $ npm start
    9. npm start
    10. npm install axios
    11. change fetch to axios in HomeScreen
-9. Install Babel For ES6 Syntax
+9. Install Babel For ES6 Syntax 01:32:10
    1. npm install -D babel core, cli, node, preset-env
    2. Create .babelrc and set presets to @babel/preset-env
    3. npm install -D nodemon
    4. set start: nodemon --watch backend --exec babel-node backend/server.js
    5. convert require to import in server.js
    6. npm start
-10. Enable Code Linting
+10. Enable Code Linting 01:39:15
     1. npm install -D eslint
     2. install VSCode eslint extension
     3. create .eslintrc and set module.exports for env to node

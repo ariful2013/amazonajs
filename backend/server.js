@@ -1,8 +1,14 @@
-const express = require('express');
+// const express = require('express');
+import express from 'express';
+// const cors = require('cors');
+import cors from 'cors';
 
 const app = express();
 
-const data = require('./data.js');
+// const data = require('./data.js');
+import data from './data';
+
+app.use(cors());
 
 app.get('/api/products', (req, res) => {
   res.send(data.products);
