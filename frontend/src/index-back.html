@@ -8,6 +8,7 @@
   <title>Amazona By Vanilla JS</title>
   <link href="./assets/css/bootstrap.css" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/style.css" />
+
 </head>
 
 <body>
@@ -62,15 +63,10 @@
                 </li>
               </ul>
 
-              <div class="d-none d-sm-block order-3 order-sm-2">
-                <form class="input-group p-2 search-box">
-                  <select class="input-group-text">
-                    <option>All</option>
-                    <option>Shirts</option>
-                    <option>Pants</option>
-                  </select>
+              <div class="search-box d-none d-sm-block order-3 order-sm-2">
+                <form class="input-group p-2">
                   <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                  <button class="btn btn-primary" type="submit">
+                  <button class="btn search-btn" type="submit">
                     <i class="fa fa-search"></i>
                   </button>
                 </form>
@@ -78,15 +74,10 @@
 
             </div>
 
-            <div class="d-block d-sm-none">
-              <form class="input-group p-2 search-box">
-                <select class="input-group-text">
-                  <option>All</option>
-                  <option>Shirts</option>
-                  <option>Pants</option>
-                </select>
+            <div class="search-box d-block d-sm-none">
+              <form class="input-group p-2">
                 <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-primary" type="submit">
+                <button class="btn search-btn" type="submit">
                   <i class="fa fa-search"></i>
                 </button>
               </form>
@@ -96,8 +87,60 @@
       </nav>
     </header>
 
-    <main id="main" class="main"></main>
-
+    <main id="main" class="main">
+      <div class="container-fluid">
+        <ul class="row">
+          <li class="col-lg-3 col-sm-6 col-12">
+            <div class="card m-2">
+              <div class="card-header">
+                <a class="img-wrap" href="/#/product/${product._id}">
+                  <img class="card-img-top" src="./assets/images/product-1.jpg" />
+                </a>
+              </div>
+              <div class="card-body">
+                <a href="/#/product/${product._id}">
+                  <h2 class="card-title">Shirts of Top</h2>
+                </a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure eos consectetur quisquam. Aut harum tempore accusamus deleniti eum
+                  sequi, dignissimos adipisci numquam ex est eius nostrum distinctio eligendi eaque rem.</p>
+                <div class="rating-wrap">
+                  <ul class="rating-stars">
+                    <li class="stars-active" style="width:50%;">
+                      <img src="./assets/images/stars-active.svg" alt="">
+                    </li>
+                    <li class="invisible">
+                      <img src="./assets/images/starts-disable.svg" alt="">
+                    </li>
+                  </ul>
+                  <span class="label-rating text-warning">4.5</span>
+                </div>
+              </div>
+              <div class="card-footer">
+                <a href="#" class="float-end btn btn-primary btn-icon"><i class="fa fa-shopping-cart"></i></a>
+                <a href="#" class="btn btn-outline-primary btn-icon"><i class="fa fa-heart"></i></a>
+                <a class="category" href="/#/product/?category=${product.category}">Shirt</a>
+                <div class="pricing">
+                  <strong class="price"> $399.50 </strong>
+                  <del class="price-old"> $490</del> <br>
+                  <small class="text-danger"> You save 10% </small>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <nav class="row" aria-label="Page navigation example">
+          <ul class="pagination p-2 justify-content-center">
+            <li class="page-item"><a class="page-link" href="#">
+                Previous</a>
+            </li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item"><a class="page-link" href="#">Next</a></li>
+          </ul>
+        </nav>
+      </div>
+    </main>
     <footer class="container-fluid footer">
       <div class="d-flex justify-content-center align-items-center py-1">
         <p>All rights reserved &copy; <span class="text-primary">2022</span></p>
@@ -107,7 +150,6 @@
   <script src="./assets/js/bootstrap.bundle.js" type="text/javascript"></script>
   <script src="./assets/js/fontawsome.all.js" type="text/javascript"></script>
   <script src="./assets/js/custom-script.js" type="text/javascript"></script>
-  <script src="./app.js" type="module"></script>
 </body>
 
 </html>

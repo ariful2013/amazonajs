@@ -1,0 +1,28 @@
+{
+  "name": "amazonajs",
+  "version": "1.0.0",
+  "description": "# Amazona ECommerce Website",
+  "main": "index.js",
+  "scripts": {
+    "server": "node backend/server.js",
+    "frontend": "npm start --prefix frontend",
+    "start": "concurrently \"npm run server\" \"npm run frontend\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ariful2013/amazonajs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ariful2013/amazonajs/issues"
+  },
+  "homepage": "https://github.com/ariful2013/amazonajs#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "concurrently": "^7.4.0"
+  }
+}

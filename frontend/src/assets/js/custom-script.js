@@ -1,14 +1,10 @@
 const headerElement = document.getElementById('header');
-const mainElement = document.getElementById('main');
+// const mainElement = document.getElementById('main');
 
-window.addEventListener('scroll', () => {
-  // headerElement.classList.toggle('sticky', window.scrollY > 0);
+window.addEventListener('load', () => {
+  document.body.style.paddingTop = headerElement.offsetHeight + 'px';
+});
 
-  if (window.scrollY > 0) {
-    headerElement.classList.add('sticky');
-    mainElement.style.paddingTop = headerElement.offsetHeight + 'px';
-  } else {
-    headerElement.classList.remove('sticky');
-    mainElement.style.paddingTop = '0px';
-  }
+window.addEventListener('resize', () => {
+  document.body.style.paddingTop = headerElement.offsetHeight + 'px';
 });
