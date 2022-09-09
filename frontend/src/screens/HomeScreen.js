@@ -2,17 +2,17 @@ import data from '../data.js';
 
 const ProductComponent = (product) => {
   return `
-    <div class="col">
+    <div class="col mb-3">
       <div class="card h-100">
         <div class="card-header">
           <div class="image-container">
-          <a href="#">
+          <a href="#/product/${product._id}">
             <img src="./assets/images/${product.image}" class="" alt="...">
           </a>
           </div>
         </div>
         <div class="card-body">
-          <a href="#">
+          <a href="#/product/${product._id}">
             <h3 class="card-title fw-bold d-inline">${product.name}</h3>
           </a>
           

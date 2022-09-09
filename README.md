@@ -176,7 +176,7 @@ $ npm start
    11. create router() function
    12. set main_container innerHTML to HomeScreen.render()
    13. set load event of window to router() function
-5. Build Url Router
+5. Build Url Router 01:06::00
    1. create routes as route:screen object for home screen
    2. create utils.js
    3. export parseRequestURL()

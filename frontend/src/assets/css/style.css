@@ -58,10 +58,16 @@ li {
   font-weight: bold;
 }
 
-.search-btn {
+.btn-primary {
   color: rgb(0, 0, 0);
   background-color: rgb(240, 128, 64);
   border-color: rgb(240, 128, 64);
+}
+
+.btn-primary:hover {
+  color: rgb(0, 0, 0);
+  background-color: rgb(240, 128, 32);
+  border-color: rgb(240, 128, 32);
 }
 
 .main {
