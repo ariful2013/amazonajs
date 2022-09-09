@@ -162,7 +162,7 @@ $ npm start
    4. add .product-image, .product-name, .product-brand, .product-price
    5. style ul.products and internal divs
    6. duplicate 2 times to show 3 products
-4. Render Dynamic Home Screen
+4. Render Dynamic Home Screen 00:40:30
    1. create data.js
    2. export an array of 6 products
    3. create screens/HomeScreen.js
@@ -176,7 +176,7 @@ $ npm start
    11. create router() function
    12. set main_container innerHTML to HomeScreen.render()
    13. set load event of window to router() function
-5. Build Url Router
+5. Build Url Router 01:06::00
    1. create routes as route:screen object for home screen
    2. create utils.js
    3. export parseRequestURL()
