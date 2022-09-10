@@ -7,7 +7,7 @@ export default {
       image: 'pexels-01.jpg',
       price: 59,
       brand: 'Hiskywin',
-      rating: 4.5,
+      rating: 4.25,
       numReviews: 10,
       countInStock: 6,
       desc: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet, assumenda? Rem, consectetur quod. Voluptatem, aliquid quam eum',

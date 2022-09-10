@@ -1,7 +1,27 @@
 // import data from '../data.js';
 import axios from 'axios';
 
+const RatingComponent = (rating) => {
+  const ratingPercentage = (rating / 5) * 100;
+  const ratingPercentageRounded = `${Math.round(ratingPercentage / 10) * 10}%`;
+
+  return `
+    <div class="d-flex justify-content-between align-items-center">
+      <ul class="rating-stars">
+        <li class="stars-active" style="width:${ratingPercentageRounded}">
+          <img src="../assets/images/stars-active.svg" alt=""></li>
+        <li>
+          <img src="../assets/images/stars-disable.svg" alt=""></li>
+        </li>
+      </ul>
+      <span class="text-warning">${rating}</span>
+    </div>
+  `;
+};
+
 const ProductComponent = (product) => {
+  const stockAvailability =
+    product.countInStock <= 0 ? `Unavailable` : `In Stock`;
   return `
     <div class="col mb-3">
       <div class="card h-100">
@@ -19,7 +39,9 @@ const ProductComponent = (product) => {
           
           <div class="d-flex justify-content-between align-items-center">
             <span>Price :</span>
-            <span><small class="text-decoration-line-through">$ ${product.price}</small> <b class="fs-2">$ ${product.price}</b></span>
+            <span><small class="text-decoration-line-through">$ ${
+              product.price
+            }</small> <b class="fs-2">$ ${product.price}</b></span>
           </div>
 
           <div class="d-flex justify-content-between align-items-center">
@@ -29,7 +51,7 @@ const ProductComponent = (product) => {
 
           <div class="d-flex justify-content-between align-items-center">
             <span>Available :</span>
-            <span>In Stock</span>
+            <span>${stockAvailability}</span>
           </div>
 
           <div class="d-flex justify-content-between align-items-center">
@@ -37,7 +59,9 @@ const ProductComponent = (product) => {
             <span>${product.numReviews}</span>
           </div>
 
-          <small class="text-info">Rating Star</small>
+          <div class="d-block">
+            ${RatingComponent(product.rating)}
+          </div>
         </div>
         <div class="card-footer">
           <div class="d-grid gap-2">

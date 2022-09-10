@@ -249,7 +249,7 @@ $ npm start
     8. style div.rating, span and last span
     9. Edit HomeScreen
     10. Add div.product-rating and use Rating component
-13. Product Screen
+13. Product Screen 02:05:00
     1. get product id from request
     2. implement /api/product/:id api
     3. send Ajax request to product api

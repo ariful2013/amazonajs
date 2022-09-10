@@ -89,6 +89,38 @@ li {
   object-fit: cover;
 }
 
+/* Rating Styles */
+.rating-stars {
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  white-space: nowrap;
+  clear: both;
+}
+
+.rating-stars li {
+  display: block;
+  text-overflow: clip;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+.rating-stars li.stars-active {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+
+.rating-stars img {
+  height: 1.6rem;
+  max-width: none;
+}
+/* ----------------------- */
+
 .footer {
   grid-area: footer;
   background-color: #203040;
